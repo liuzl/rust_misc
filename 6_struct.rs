@@ -31,4 +31,17 @@ fn main() {
 
     let bottom_right = Point {x:5.2, ..point};
     println!("second point: ({}, {})", bottom_right.x, bottom_right.y);
+
+    let Point {x: abc, y: xyz} = point;
+    let _rec = Rectangle {
+        top_left: Point {x: abc, y: xyz},
+        bottom_right: bottom_right,
+    };
+
+    let _nil = Nil;
+    let pair = Pair(1, 0.1);
+    println!("pair contains {:?} and {:?}", pair.0, pair.1);
+
+    let Pair(integer, decimal) = pair;
+    println!("pair contains {:?} and {:?}", integer, decimal);
 }
