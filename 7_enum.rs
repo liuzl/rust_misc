@@ -20,6 +20,22 @@ fn inspect(event: WebEvent) {
     }
 }
 
+enum VeryVerboseEnumOfThingsToDoWithNumbers {
+    Add,
+    Substract,
+}
+
+type Operations = VeryVerboseEnumOfThingsToDoWithNumbers;
+
+impl VeryVerboseEnumOfThingsToDoWithNumbers {
+    fn run(&self, x: i32, y: i32) -> i32 {
+        match self {
+            Self::Add => x + y,
+            Self::Substract => x - y,
+        }
+    }
+}
+
 fn main() {
     let pressed = WebEvent::KeyPress('x');
     let pasted = WebEvent::Paste("my text".to_owned());
@@ -32,4 +48,6 @@ fn main() {
     inspect(click);
     inspect(load);
     inspect(unload);
+
+    let x = Operations::Add;
 }
