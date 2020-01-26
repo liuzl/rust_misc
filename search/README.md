@@ -1,0 +1,2 @@
+* toshi
+* MeiliSearch
