@@ -1,2 +1,3 @@
 * toshi
 * MeiliSearch
+* sonic
